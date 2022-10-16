@@ -1,0 +1,257 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+/*etiquetas*/
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    /*align-items: center;
+    flex-wrap: nowrap;
+    width: auto;*/
+    border-style: solid;
+    border-width: 3px;
+    border-color: #919193;
+    opacity: 70%;
+    background-color:#d9d9d9;
+    /*font-size: 20px;*/
+    font-weight: 600;
+}
+ul {
+    list-style: none;
+}
+li {
+    display: inline-block;
+    margin-left: 30px;
+}
+li:hover ul {
+    display: block;
+}
+body {
+    font-family: 'baloo thambi 2', sans-serif;
+    /*height: 100%;
+    min-height: 100%;
+    margin-bottom: 0px;*/
+    background-image:url("img/fondo.jpg");
+    background-size: 30%;
+    background-repeat: repeat;
+    /*position: relative;*/
+    }
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*width: 100%;
+    height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: auto;*/
+    border-style:none;
+    /*text-align:center;*/
+    background-color: #D9D9D9;
+    /*padding: 10px 0px 10px 0px;*/
+}
+a:link {
+    color: #131313;
+    text-decoration: none;
+}
+a:visited {
+    color: #131313;
+    text-decoration: none;
+}
+a:hover {
+    color: #1c1ab9;
+}
+/*clases*/
+.header-index {
+    /*width: 100%;
+    height: 240px;*/
+    background-color:#d9d9d9;
+    opacity: 60%;
+    /*display: flex;
+    justify-content: center;*/
+}
+.header-index img {
+    /*width: 400px;
+    height: 200px;
+    padding: 20px 0 20px 0;*/
+}
+/*contendedor header, body, footer*/
+/*.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}*/
+/*header cakes, cupcakes, macarons, contacto*/
+.encabezado {
+    grid-area: encabezado;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*width: 100%;*/
+    /*height: 100px;*/
+    background-color:#d9d9d9;
+    opacity: 60%;
+    /*display: flex;
+    justify-content: center;*/
+}
+.encabezado img {
+    height: 100px;
+    /*width: 150px;
+    height: 1fr;
+    padding: 20px 0 20px 0;*/
+}
+/*barra de buscador*/
+.buscador {
+    /*width: 250px;
+    height: 20px;*/
+    border-style: solid;
+    border-width: 1px;
+    /*display: flex;
+    flex-direction:row;
+    align-content:flex-end;
+    margin-right: 30px;
+    font-size: 16px;*/
+}
+/*titulo y parrafo*/
+.delicias {
+    grid-area: delicias;
+    text-align: justify;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: rgba(12, 12, 12, 0.835);
+}
+.delicias__titulo {
+    /*font-size: 32px;*/
+    font-weight: 600;
+}
+.delicias__descripcion {
+    /*font-size: 18px;
+    width: 100%;
+    margin-top: 10px;*/
+}
+/*galeria index*/
+.galeria__imagen {
+    /*max-width: 350px;*/
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 60%;
+    border-color: #919193;
+}
+.galeria__imagen:hover {
+    opacity: 75%;
+}
+/*productos*/
+.galeria {
+    grid-area: galeria;
+    display: grid;
+    grid-template-rows:repeat(3, 1fr);
+    grid-template-columns:repeat(4, 1fr);
+    gap: 30px;
+    /*display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;*/
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.galeria__fotos{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    /*margin-bottom: 20px;*/
+}
+.galeria__fotos img {
+    width: 70%;
+    height: 70%;
+    align-self: center;
+    /*height: 250px;
+    width: 250px;*/
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 50%;
+    border-color: #919193;
+    margin: 0 20px 0 20px;
+}
+.galeria__fotos:hover {
+    opacity: 75%;
+}
+/*formulario*/
+.formulario {
+    /*display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 400px;
+    height: 450px;
+    margin: 30px;
+    margin-left: -30px;
+    padding: 20px;*/
+    background-color:#d9d9d9;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #919193;
+    color:  rgba(12, 12, 12, 0.835);
+    /*font-size: 16px;
+    text-align: left;*/
+}
+.formulario__input {
+    height: 30px;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 0px;
+    background-color:#ebebeefc;
+    border-style: solid;
+    border-width: 1px;
+}
+.formulario__text {
+    height: 100px;
+    width: 100%;
+    padding-left: 5px;
+    background-color:#ebebeefc;
+    border-style: solid;
+    border-width: 1px;
+}
+.button {
+    height: 30px;
+    width: 100px;
+    border: solid;
+    border-width: 1px;
+    border-color: #919193;
+    font-size: 14px;
+    color:  rgba(12, 12, 12, 0.835);
+    justify-content: center;
+}
+/*mapa*/
+.mapa {
+    width: 800px;
+    height: 490px;
+    margin: 30px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #919193;
+}
+/*formulario y mapa*/
+.contacto {
+    display: flex;
+    justify-content: space-between;
+}
+/*grid*/
+#grid-paginas {
+    display: grid;
+    height: 100vh;
+    padding: 0;
+    grid-template-areas:
+        " encabezado encabezado encabezado encabezado " /*1fr*/
+        " nav nav nav nav " /*1fr*/
+        " delicias delicias delicias delicias "
+        " galeria galeria galeria galeria "
+        " footer footer footer footer ";
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: 20% 2fr 2fr 4fr 1fr
+}
