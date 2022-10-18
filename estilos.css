@@ -2,14 +2,16 @@
     margin: 0px;
     padding: 0px;
 }
+
 /*etiquetas*/
+
 nav {
     grid-area: nav;
     display: flex;
     justify-content: space-between;
-    /*align-items: center;
-    flex-wrap: nowrap;
-    width: auto;*/
+    align-items: center;
+    flex-wrap: wrap;
+    width: auto;
     border-style: solid;
     border-width: 3px;
     border-color: #919193;
@@ -18,16 +20,20 @@ nav {
     /*font-size: 20px;*/
     font-weight: 600;
 }
+
 ul {
     list-style: none;
 }
+
 li {
     display: inline-block;
     margin-left: 30px;
 }
+
 li:hover ul {
     display: block;
 }
+
 body {
     font-family: 'baloo thambi 2', sans-serif;
     /*height: 100%;
@@ -38,6 +44,7 @@ body {
     background-repeat: repeat;
     /*position: relative;*/
     }
+
 footer {
     grid-area: footer;
     display: flex;
@@ -53,31 +60,39 @@ footer {
     background-color: #D9D9D9;
     /*padding: 10px 0px 10px 0px;*/
 }
+
 a:link {
     color: #131313;
     text-decoration: none;
 }
+
 a:visited {
     color: #131313;
     text-decoration: none;
 }
+
 a:hover {
     color: #1c1ab9;
 }
 /*clases*/
+
 .header-index {
+    grid-area: header-index;
     /*width: 100%;
     height: 240px;*/
     background-color:#d9d9d9;
     opacity: 60%;
-    /*display: flex;
-    justify-content: center;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .header-index img {
-    /*width: 400px;
-    height: 200px;
-    padding: 20px 0 20px 0;*/
+    height: 80%;
+    width: auto;
+    padding: 20px 0 20px 0;
 }
+
 /*contendedor header, body, footer*/
 /*.container {
     display: flex;
@@ -85,6 +100,7 @@ a:hover {
     min-height: 100vh;
 }*/
 /*header cakes, cupcakes, macarons, contacto*/
+
 .encabezado {
     grid-area: encabezado;
     display: flex;
@@ -94,28 +110,31 @@ a:hover {
     /*height: 100px;*/
     background-color:#d9d9d9;
     opacity: 60%;
-    /*display: flex;
-    justify-content: center;*/
 }
+
 .encabezado img {
-    height: 100px;
-    /*width: 150px;
-    height: 1fr;
-    padding: 20px 0 20px 0;*/
+    height: 80%;
+    width: auto;
+    padding: 20px 0 20px 0;
 }
+
 /*barra de buscador*/
+
 .buscador {
     /*width: 250px;
     height: 20px;*/
     border-style: solid;
     border-width: 1px;
-    /*display: flex;
-    flex-direction:row;
-    align-content:flex-end;
+    display: flex;
+    /*flex-direction:row;
+    align-content:flex-end;*/
     margin-right: 30px;
-    font-size: 16px;*/
+    margin-left: 30px;
+    font-size: 16px;
 }
+
 /*titulo y parrafo*/
+
 .delicias {
     grid-area: delicias;
     text-align: justify;
@@ -124,32 +143,63 @@ a:hover {
     margin-right: 30px;
     color: rgba(12, 12, 12, 0.835);
 }
+
 .delicias__titulo {
-    /*font-size: 32px;*/
+    font-size: 32px;
     font-weight: 600;
 }
+
 .delicias__descripcion {
-    /*font-size: 18px;
+    font-size: 18px;
     width: 100%;
-    margin-top: 10px;*/
+    margin-top: 10px;
 }
+
 /*galeria index*/
-.galeria__imagen {
+
+.galeria-index {
+    grid-area: galeria-index;
+    display: grid;
+    /*height: 100vh;*/
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 5vw;
+    /*display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;*/
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0 5vw 0 5vw;
+}
+
+.galeria-index img {
     /*max-width: 350px;*/
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
     border-style: solid;
     border-width: 3px;
     border-radius: 60%;
     border-color: #919193;
 }
-.galeria__imagen:hover {
+
+.galeria-index img:hover {
     opacity: 75%;
 }
+
 /*productos*/
+
 .galeria {
     grid-area: galeria;
     display: grid;
+    /*height: 100vh;*/
     grid-template-rows:repeat(3, 1fr);
-    grid-template-columns:repeat(4, 1fr);
+    /*grid-template-columns:repeat(4, 1fr);*/
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
     /*display: flex;
     flex-wrap: wrap;
@@ -160,12 +210,13 @@ a:hover {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
 .galeria__fotos{
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    /*margin-bottom: 20px;*/
 }
+
 .galeria__fotos img {
     width: 70%;
     height: 70%;
@@ -176,14 +227,17 @@ a:hover {
     border-width: 3px;
     border-radius: 50%;
     border-color: #919193;
-    margin: 0 20px 0 20px;
+    /*margin: 0 20px 0 20px;*/
 }
+
 .galeria__fotos:hover {
     opacity: 75%;
 }
+
 /*formulario*/
+
 .formulario {
-    /*display: flex;
+    display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-around;
@@ -191,15 +245,16 @@ a:hover {
     height: 450px;
     margin: 30px;
     margin-left: -30px;
-    padding: 20px;*/
+    padding: 20px;
     background-color:#d9d9d9;
     border-style: solid;
     border-width: 3px;
     border-color: #919193;
     color:  rgba(12, 12, 12, 0.835);
-    /*font-size: 16px;
-    text-align: left;*/
+    font-size: 16px;
+    text-align: left;
 }
+
 .formulario__input {
     height: 30px;
     width: 100%;
@@ -209,6 +264,7 @@ a:hover {
     border-style: solid;
     border-width: 1px;
 }
+
 .formulario__text {
     height: 100px;
     width: 100%;
@@ -217,6 +273,7 @@ a:hover {
     border-style: solid;
     border-width: 1px;
 }
+
 .button {
     height: 30px;
     width: 100px;
@@ -227,6 +284,7 @@ a:hover {
     color:  rgba(12, 12, 12, 0.835);
     justify-content: center;
 }
+
 /*mapa*/
 .mapa {
     width: 800px;
@@ -236,12 +294,32 @@ a:hover {
     border-width: 3px;
     border-color: #919193;
 }
+
 /*formulario y mapa*/
+
 .contacto {
     display: flex;
     justify-content: space-between;
 }
-/*grid*/
+
+/*grid index*/
+
+#grid-index {
+    display: grid;
+    height: 100vh;
+    padding: 0;
+    grid-template-areas:
+        " header-index header-index header-index " 
+        " nav nav nav "
+        " delicias delicias delicias "
+        " galeria-index galeria-index galeria-index "
+        " footer footer footer ";
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: 30% 5% 2fr auto 5%
+}
+
+/*grid paginas*/
+
 #grid-paginas {
     display: grid;
     height: 100vh;
@@ -253,5 +331,25 @@ a:hover {
         " galeria galeria galeria galeria "
         " footer footer footer footer ";
     grid-template-columns:repeat(4, 1fr);
-    grid-template-rows: 20% 2fr 2fr 4fr 1fr
+    grid-template-rows: 20% 5% 2fr auto 5%
 }
+
+/*estilo responsive*/
+
+@media screen and (max-width:768px) {
+.encabezado {
+    background-color: black;
+}
+#grid-paginas {
+    padding: 0;
+    grid-template-areas:
+        " encabezado encabezado encabezado encabezado " /*1fr*/
+        " nav nav nav nav " /*1fr*/
+        " nav nav nav nav"
+        " delicias delicias delicias delicias "
+        " galeria galeria galeria galeria "
+        " footer footer footer footer ";
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: 25% 5% auto 2fr auto 5%
+}
+    }
