@@ -233,12 +233,13 @@ a:hover {
 /*formulario*/
 
 .formulario {
+    grid-area: formulario;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-around;
     width: 400px;
-    height: 450px;
+    height: auto;
     margin: 30px;
     margin-left: -30px;
     padding: 20px;
@@ -284,6 +285,7 @@ a:hover {
 /*mapa*/
 
 .mapa {
+    grid-area: mapa;
     width: 800px;
     height: 490px;
     margin: 30px;
@@ -326,6 +328,20 @@ a:hover {
         " nav nav nav nav " /*1fr*/
         " delicias delicias delicias delicias "
         " galeria galeria galeria galeria "
+        " footer footer footer footer ";
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: 25% auto 2fr auto 5%
+}
+
+#grid-contacto {
+    display: grid;
+    height: 100vh;
+    padding: 0;
+    grid-template-areas:
+        " encabezado encabezado encabezado encabezado "
+        " nav nav nav nav "
+        " delicias delicias delicias delicias "
+        " mapa mapa mapa formulario "
         " footer footer footer footer ";
     grid-template-columns:repeat(4, 1fr);
     grid-template-rows: 25% auto 2fr auto 5%
