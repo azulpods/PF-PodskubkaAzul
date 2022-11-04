@@ -17,7 +17,7 @@ nav {
 }
 
 ul {
-    list-style: none;
+
 }
 
 li {
@@ -128,27 +128,6 @@ a:hover {
 
 /*titulo y parrafo*/
 
-.delicias-index {
-    grid-area: delicias;
-    background-color: $color-1-group-1;
-    text-align: justify;
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 50px;
-    padding: 30px;
-    color: $color-2-group-2;
-    &__titulo {
-        font-size: 32px;
-        font-weight: 600;
-    }
-    &__descripcion {
-        font-size: 20px;
-        width: 100%;
-        margin-top: 10px;
-    }
-}
-
 .delicias {
     grid-area: delicias;
     text-align: justify;
@@ -174,47 +153,67 @@ a:hover {
     margin-top: 30px;
     margin-bottom: 50px;
     margin-right: 30px;
+    margin-left: 30px;
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(max(150px, 100%/5), 1fr));
-    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(max(250px, 100%/4), 1fr));
     gap: 2vw;
-    .box{
+    .horizontal{
+        grid-column: 1/2;
+        grid-row: 1;
         width: 100%;
         height: auto;
         /*max-height: 300px;*/
         text-align: center;
-        overflow: hidden;
         position: relative;
         justify-content: center;
         align-items: center;
         img {
             width: 100%;
-            height: auto;
-            object-fit:scale-down;
-        }
-        &:hover .hover{
-            width: 100%;
-        }
-        .hover{
-            width: 0%;
             height: 100%;
-            background-color: $color-2-group-1;
-            position: absolute;
-            top: 0;
-            display: flex;
+            object-fit:cover;
+        }
+    }
+    .vertical{
+        grid-column: 3/5;
+        grid-row: 1;
+        .box{
+            width: 100%;
+            height: auto;
+            /*max-height: 300px;*/
+            text-align: center;
+            overflow: hidden;
+            position: relative;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-            transition: .4s all;
-            h3{
-                color: $color-3-group-2;
-                text-shadow: 1px 1px 1px black;
-                font-size: 30px;
+            img {
+                width: 100%;
+                height: auto;
+                object-fit:scale-down;
+            }
+            &:hover .hover{
+                width: 100%;
+            }
+            .hover{
+                width: 0%;
+                height: 100%;
+                background-color: $color-2-group-1;
+                position: absolute;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                transition: .4s all;
+                h3{
+                    color: $color-3-group-2;
+                    text-shadow: 1px 1px 1px black;
+                    font-size: 30px;
+                }
             }
         }
     }
 }
-
 /*galeria cakes y cupcakes*/
 
 .galeria {
@@ -236,7 +235,7 @@ a:hover {
         border-width: 2px;
         border-radius: 5%;
         border-color:$color-3-group-3;
-        h5{
+        .precio{
             font-size: 24px;
             font-weight: 600;
             align-items: center;
@@ -273,7 +272,7 @@ a:hover {
     margin-left: 30px;
     margin-right: 30px;
     &__fotos{
-        p{
+        .precio{
             font-size: 24px;
             font-weight: 600;
             text-align: center;
@@ -306,6 +305,30 @@ a:hover {
     margin-bottom: 50px;
     margin-left: 30px;
     margin-right: 30px;
+    .iconos{
+        grid-column: 3;
+        grid-row: 1;
+        ul{
+            height: 100%;
+            background-color: $color-1-group-1;
+            padding: 30px;
+            li{
+                display: flex;
+                margin-bottom: 30px;
+                list-style: none;
+                img{
+                    height: 36px;
+                    width: auto;
+                }
+                .iconos-texto{
+                    font-size: 16px;
+                    margin-left: 20px;
+                    text-align: left;
+                    text-justify: center;
+                }
+            }
+        }
+    }
 }
 
 /*mapa*/
@@ -391,10 +414,11 @@ a:hover {
         " header-index header-index header-index header-index" 
         " nav nav nav nav"
         " carousel carousel carousel carousel "
-        " delicias delicias galeria-index galeria-index "
+        " delicias delicias delicias delicias "
+        " galeria-index galeria-index galeria-index galeria-index"
         " footer footer footer footer ";
     grid-template-columns:repeat(4, 1fr);
-    grid-template-rows: 30% auto auto 1fr 5%
+    grid-template-rows: 30% auto auto 1fr auto 5%
 }
 
 /*grid paginas*/
