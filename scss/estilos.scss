@@ -122,7 +122,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     img {
-        height: 80%;
+        height: 75%;
         width: auto;
         animation-duration: 3s;
         animation-name: rebote;
@@ -166,11 +166,11 @@ a:hover {
             }
         }
         @include xm-device{
-            height: 65%;
+            height: 60%;
             width: auto;
         }
         @include phone {
-            height: 70%;
+            height: 60%;
             width: auto;
         }
     }
@@ -351,7 +351,10 @@ a:hover {
                 h3{
                     color: $color-3-group-2;
                     text-shadow: 1px 1px 1px black;
-                    font-size: 30px;
+                    font-size: 40px;
+                    @include xm-device{
+                        font-size: 36px;
+                    }
                 }
             }
         }
@@ -372,7 +375,9 @@ a:hover {
     @include xm-device{
         margin-top: 20px;
         margin-bottom: 20px;
-    }
+        margin-left: 70px;
+        margin-right: 70px;
+        }
     @include phone{
         margin-top: 25px;
         margin-bottom: 25px;
@@ -391,10 +396,10 @@ a:hover {
             font-weight: 600;
             align-items: center;
             @include xm-device{
-                font-size: 18px;
+                font-size: 20px;
             }
             @include phone{
-                font-size: 20px;
+                font-size: 22px;
             }
         }
         p{
@@ -412,12 +417,17 @@ a:hover {
             }
         }
     }
-    &__fotos img {
-        width: 100%;
-        height: auto;
-        align-self: center;
-        &:hover {
-            opacity: 75%;
+    &__fotos{
+        @include xm-device{
+            width: 100%;
+        }
+            img {
+            width: 100%;
+            height: auto;
+            align-self: center;
+            &:hover {
+                opacity: 75%;
+            }
         }
     }
 }
@@ -437,6 +447,8 @@ a:hover {
     @include xm-device{
         margin-top: 20px;
         margin-bottom: 20px;
+        margin-left: 70px;
+        margin-right: 70px;
     }
     @include phone{
         margin-top: 25px;
@@ -452,6 +464,12 @@ a:hover {
             border-width: 2px;
             border-radius: 5%;
             border-color:$color-3-group-3;
+            @include xm-device{
+                font-size: 20px;
+            }
+            @include phone{
+                font-size: 22px;
+            }
         }
         img {
             width: 100%;
@@ -609,6 +627,17 @@ a:hover {
         " footer footer footer footer ";
     grid-template-columns:repeat(4, 1fr);
     grid-template-rows: 30% auto auto 1fr auto 5%;
+    @include xm-device{
+        grid-template-areas:
+            " header-index header-index header-index" 
+            " nav nav nav "
+            " carousel carousel carousel "
+            " delicias delicias delicias "
+            " galeria-index galeria-index galeria-index"
+            " footer footer footer ";
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-rows: 10% auto auto 1fr auto 5%
+        }
     @include phone{
         grid-template-areas:
             " header-index header-index header-index" 
@@ -618,7 +647,7 @@ a:hover {
             " galeria-index galeria-index galeria-index"
             " footer footer footer ";
         grid-template-columns:repeat(3, 1fr);
-        grid-template-rows: 30% auto auto 1fr auto 5%
+        grid-template-rows: 20% auto auto 1fr auto 5%
         }
 }
 
