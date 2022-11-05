@@ -1,41 +1,5 @@
 @import "colores";
-
-$phone-width: 600px;
-$tablet-width: 768px;
-$laptop-width: 992px;
-$desktop-width: 1024px;
-$imac-width: 1620px;
-
-@mixin xm-device {
-    @media (max-width: #{$phone-width - 1px}) {
-        @content;
-    }
-}
-@mixin phone {
-    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
-        @content;
-    }
-}
-@mixin tablet {
-    @media (min-width: #{$tablet-width}) and (max-width: #{$laptop-width - 1px}) {
-        @content;
-    }
-}
-@mixin laptop {
-    @media (min-width: #{$laptop-width} ) and (max-width: #{$desktop-width - 1px}) {
-        @content;
-    }
-}
-@mixin desktop {
-    @media (min-width: #{$desktop-width}) and (max-width: #{$imac-width - 1px}) {
-        @content;
-    }
-}
-@mixin imac {
-    @media (min-width: #{$imac-width}) {
-        @content;
-    }
-}
+@import "responsive";
 
 * {
     margin: 0px;
@@ -57,7 +21,6 @@ nav {
     @include phone {
         border-width: 1px;
     }
-
 }
 
 li {
@@ -88,12 +51,12 @@ footer {
     align-items: center;
     border-style:none;
     background-color: $color-1-group-1;
-    font-size: 16px;
+    font-size: 18px;
     @include xm-device{
-        font-size: 12px;
+        font-size: 14px;
     }
     @include phone{
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -105,10 +68,6 @@ a:link {
 a:visited {
     color: #131313;
     text-decoration: none;
-}
-
-a:hover {
-    color: #1c1ab9;
 }
 
 /*clases*/
@@ -222,8 +181,15 @@ a:hover {
 .carousel{
     grid-area: carousel;
     height: 500px;
+    width: 100%;
+    @include xm-device{
+        height: 400px;
+    }
     &-item{
         height: 500px;
+        @include xm-device{
+            height: 400px;
+        }
         img{
             height: 100%;
         }
@@ -260,14 +226,14 @@ a:hover {
         }
     }
     &__descripcion {
-        font-size: 20px;
+        font-size: 22px;
         width: 100%;
         margin-top: 10px;
         @include xm-device{
-            font-size: 16px;
+            font-size: 18px;
         }
         @include phone {
-            font-size: 18px;
+            font-size: 20px;
         }
     }
 }
@@ -389,7 +355,7 @@ a:hover {
         border: solid;
         border-style:dashed;
         border-width: 2px;
-        border-radius: 10%;
+        border-radius: 5%;
         border-color:$color-3-group-3;
         .precio{
             font-size: 24px;
@@ -524,16 +490,16 @@ a:hover {
                 padding: 20px;
             }
             h5{
-                font-size: 20px;
+                font-size: 24px;
                 display: flex;
                 justify-content: center;
                 padding-bottom: 30px;
                 @include xm-device{
-                    font-size: 18px;
+                    font-size: 20px;
                     padding-bottom: 15px;
                 }
                 @include phone{
-                    font-size: 18px;
+                    font-size: 22px;
                     padding-bottom: 20px;
                 }
             }
@@ -558,7 +524,7 @@ a:hover {
                     }
                 }
                 .iconos-texto{
-                    font-size: 16px;
+                    font-size: 18px;
                     margin-left: 20px;
                     text-align: left;
                     text-justify: center;
@@ -567,7 +533,7 @@ a:hover {
                         margin-left: 10px;
                     }
                     @include phone{
-                        font-size: 14px;
+                        font-size: 16px;
                         margin-left: 15px;
                     }
                 }
@@ -622,14 +588,26 @@ a:hover {
             border-width: 1px;
             border-color: $color-1-group-3;
             color:  $color-2-group-2;
-            font-size: 16px;
+            font-size: 20px;
             text-align: left;
             box-sizing: border-box;
+            @include xm-device{
+                font-size: 16px;
+            }
+            @include phone{
+                font-size: 18px;
+            }
             h5{
-                font-size: 20px;
+                font-size: 24px;
                 display: flex;
                 justify-content: center;
                 padding-bottom: 30px;
+                @include xm-device{
+                    font-size: 20px;
+                }
+                @include phone{
+                    font-size: 22px;
+                }
             }
             &__input {
                 height: 30px;
@@ -654,9 +632,15 @@ a:hover {
                 border: solid;
                 border-width: 1px;
                 border-color: $color-1-group-3;
-                font-size: 14px;
+                font-size: 16px;
                 color:  $color-2-group-2;
                 justify-content: center;
+                @include xm-device{
+                    font-size: 14px;
+                }
+                @include phone{
+                    font-size: 14px;
+                }
             }
         }
     }
