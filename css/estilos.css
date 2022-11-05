@@ -16,6 +16,16 @@ nav {
   background-color: #D9D9D9;
   font-weight: 600;
 }
+@media (max-width: 599px) {
+  nav {
+    border-width: 1px;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  nav {
+    border-width: 1px;
+  }
+}
 
 li {
   margin-left: 5px;
@@ -31,6 +41,16 @@ body {
   background-size: 30%;
   background-repeat: repeat;
 }
+@media (max-width: 599px) {
+  body {
+    background-size: 70%;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  body {
+    background-size: 60%;
+  }
+}
 
 footer {
   grid-area: footer;
@@ -40,6 +60,14 @@ footer {
   border-style: none;
   background-color: #D9D9D9;
   font-size: 16px;
+  /*footer {
+      font-size: 14px;
+  }*/
+}
+@media (max-width: 599px) {
+  footer {
+    font-size: 12px;
+  }
 }
 
 a:link {
@@ -108,6 +136,18 @@ a:hover {
     opacity: 1;
   }
 }
+@media (max-width: 599px) {
+  .header-index img, .encabezado img {
+    height: 65%;
+    width: auto;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .header-index img, .encabezado img {
+    height: 70%;
+    width: auto;
+  }
+}
 
 /*header cakes, cupcakes, macarons, contacto*/
 .encabezado {
@@ -117,6 +157,18 @@ a:hover {
   height: 70%;
   width: auto;
   animation: none;
+}
+@media (max-width: 599px) {
+  .encabezado img {
+    height: 65%;
+    width: auto;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .encabezado img {
+    height: 70%;
+    width: auto;
+  }
 }
 
 /*barra de navegación*/
@@ -160,14 +212,48 @@ a:hover {
   margin-right: 30px;
   color: rgba(12, 12, 12, 0.835);
 }
+@media (max-width: 599px) {
+  .delicias {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .delicias {
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
 .delicias__titulo {
   font-size: 32px;
   font-weight: 600;
+}
+@media (max-width: 599px) {
+  .delicias__titulo {
+    font-size: 20px;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .delicias__titulo {
+    font-size: 28px;
+  }
 }
 .delicias__descripcion {
   font-size: 20px;
   width: 100%;
   margin-top: 10px;
+}
+@media (max-width: 599px) {
+  .delicias__descripcion {
+    font-size: 16px;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .delicias__descripcion {
+    font-size: 18px;
+  }
 }
 
 /*galeria index*/
@@ -250,6 +336,18 @@ a:hover {
   margin-left: 30px;
   margin-right: 30px;
 }
+@media (max-width: 599px) {
+  .galeria {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .galeria {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
 .galeria__texto {
   text-align: center;
   align-items: center;
@@ -293,6 +391,18 @@ a:hover {
   margin-bottom: 50px;
   margin-left: 30px;
   margin-right: 30px;
+}
+@media (max-width: 599px) {
+  .galeria-macarons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .galeria-macarons {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 }
 .galeria-macarons__fotos .precio {
   font-size: 24px;
@@ -472,34 +582,6 @@ a:hover {
 
 /*estilo responsive max 768*/
 @media screen and (max-width: 768px) {
-  nav {
-    border-width: 1px;
-  }
-  body {
-    background-size: 60%;
-  }
-  footer {
-    font-size: 14px;
-  }
-  .header-index img, .encabezado img {
-    height: 70%;
-    width: auto;
-  }
-  .encabezado img {
-    height: 70%;
-    width: auto;
-  }
-  .delicias {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .delicias__titulo {
-    font-size: 30px;
-  }
-  .delicias__descripcion {
-    font-size: 18px;
-  }
   .galeria-index {
     grid-area: galeria-index;
     display: grid;
@@ -542,24 +624,11 @@ a:hover {
   .box:hover .hover {
     width: 100%;
   }
-  .galeria {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .galeria__fotos img {
-    border-width: 2px;
-    border-radius: 50%;
-  }
   .galeria-macarons {
     grid-area: galeria;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(max(250px, 20%), 1fr));
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  .galeria-macarons__fotos img {
-    border-width: 2px;
   }
   #grid-index {
     display: grid;
@@ -576,34 +645,6 @@ a:hover {
 }
 /*estilo responsive*/
 @media screen and (max-width: 480px) {
-  nav {
-    border-width: 1px;
-  }
-  body {
-    background-size: 70%;
-  }
-  footer {
-    font-size: 12px;
-  }
-  .header-index img, .encabezado img {
-    height: 70%;
-    width: auto;
-  }
-  .encabezado img {
-    height: 70%;
-    width: auto;
-  }
-  .delicias {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .delicias__titulo {
-    font-size: 26px;
-  }
-  .delicias__descripcion {
-    font-size: 16px;
-  }
   .galeria-index {
     grid-area: galeria-index;
     display: grid;
@@ -615,26 +656,12 @@ a:hover {
   .galeria-index img {
     width: 85%;
     height: 85%;
-    border-width: 2px;
-  }
-  .galeria {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .galeria__fotos img {
-    border-width: 2px;
-    border-radius: 50%;
   }
   .galeria-macarons {
     grid-area: galeria;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(max(250px, 20%), 1fr));
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
-  .galeria-macarons__fotos img {
-    border-width: 2px;
   }
   #grid-index {
     display: grid;
