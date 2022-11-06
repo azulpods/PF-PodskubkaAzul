@@ -1,0 +1,83 @@
+/*header index*/
+
+.header-index {
+    grid-area: header-index;
+    background-color:$color-1-group-1;
+    opacity: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        height: 75%;
+        width: auto;
+        animation-duration: 3s;
+        animation-name: rebote;
+        animation-iteration-count: 1;
+        @keyframes rebote {
+            0% {
+                transform: translateY(-100px);
+                animation-timing-function: ease-in;
+                opacity: 1;
+            }
+            24% {
+                opacity: 1;
+            }
+            40% {
+                transform: translateY(-24px);
+                animation-timing-function: ease-in;
+            }
+            65% {
+                transform: translateY(-12px);
+                animation-timing-function: ease-in;
+            }
+            82% {
+                transform: translateY(-6px);
+                animation-timing-function: ease-in;
+            }
+            93% {
+                transform: translateY(-4px);
+                animation-timing-function: ease-in;
+            }
+            25%,
+            55%,
+            75%,
+            87% {
+                transform: translateY(0px);
+                animation-timing-function: ease-out;
+            }
+            100% {
+                transform: translateY(0px);
+                animation-timing-function: ease-out;
+                opacity: 1;
+            }
+        }
+        @include xm-device{
+            height: 60%;
+            width: auto;
+        }
+        @include phone {
+            height: 60%;
+            width: auto;
+        }
+    }
+}
+
+/*header cakes, cupcakes, macarons, contacto*/
+
+.encabezado {
+    grid-area: encabezado;
+    @extend .header-index;
+    img {
+        height: 70%;
+        width: auto;
+        animation: none;
+        @include xm-device{
+            height: 65%;
+            width: auto;
+        }
+        @include phone {
+            height: 70%;
+            width: auto;
+        }
+    }
+}

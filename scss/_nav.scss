@@ -1,0 +1,33 @@
+nav {
+    grid-area: nav;
+    border-style: solid;
+    border-width: 3px;
+    border-color: $color-1-group-3;
+    background-color:$color-1-group-1;
+    font-weight: 600;
+    @include xm-device{
+        border-width: 1px;
+    }
+    @include phone {
+        border-width: 1px;
+    }
+}
+
+.navbar {
+    padding: 0;
+}
+
+.dropdown-menu {
+    padding: 0;
+}
+
+.btn-outline-success {
+    color: #7b7aab;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $color-1-group-3;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #7b7aab;
+    --bs-btn-hover-border-color: $color-2-group-3;
+    --bs-btn-active-border-color: $color-2-group-3;
+}

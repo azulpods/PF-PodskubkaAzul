@@ -1,0 +1,85 @@
+/*grid index*/
+
+#grid-index {
+    display: grid;
+    height: 100vh;
+    padding: 0;
+    grid-template-areas:
+        " header-index header-index header-index header-index" 
+        " nav nav nav nav"
+        " carousel carousel carousel carousel "
+        " delicias delicias delicias delicias "
+        " galeria-index galeria-index galeria-index galeria-index"
+        " footer footer footer footer ";
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: 30% auto auto 1fr auto 5%;
+    @include xm-device{
+        grid-template-areas:
+            " header-index header-index header-index" 
+            " nav nav nav "
+            " carousel carousel carousel "
+            " delicias delicias delicias "
+            " galeria-index galeria-index galeria-index"
+            " footer footer footer ";
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-rows: 10% auto auto 1fr auto 5%
+        }
+    @include phone{
+        grid-template-areas:
+            " header-index header-index header-index" 
+            " nav nav nav "
+            " carousel carousel carousel "
+            " delicias delicias delicias "
+            " galeria-index galeria-index galeria-index"
+            " footer footer footer ";
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-rows: 20% auto auto 1fr auto 5%
+        }
+}
+
+/*grid paginas*/
+
+#grid-paginas {
+    display: grid;
+    height: 100vh;
+    padding: 0;
+    grid-template-areas:
+        " encabezado encabezado encabezado encabezado " /*1fr*/
+        " nav nav nav nav " /*1fr*/
+        " delicias delicias delicias delicias "
+        " galeria galeria galeria galeria "
+        " footer footer footer footer ";
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: 25% auto 2fr auto 5%;
+    @include xm-device{
+        grid-template-rows: 10% auto 2fr auto 5%;
+    }
+    @include phone{
+        grid-template-rows: 15% auto 2fr auto 5%;
+    }
+}
+
+/*grid contacto*/
+
+#grid-contacto {
+    display: grid;
+    height: 100vh;
+    padding: 0;
+    grid-template-areas:
+        " encabezado encabezado encabezado "
+        " nav nav nav "
+        " delicias delicias delicias "
+        " contenido contenido contenido "
+        " footer footer footer ";
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: 25% auto 2fr auto 5%;
+    box-sizing: border-box;
+    @include xm-device{
+        grid-template-columns:1fr;
+        grid-template-rows: 10% auto 2fr auto 5%;
+    }
+    @include phone{
+        grid-template-columns:1fr;
+        grid-template-rows: 15% auto 2fr auto 5%;
+    }
+}

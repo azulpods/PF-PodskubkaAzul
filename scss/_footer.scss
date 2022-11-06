@@ -1,0 +1,15 @@
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style:none;
+    background-color: $color-1-group-1;
+    font-size: $footer;
+    @include xm-device{
+        font-size: 14px;
+    }
+    @include phone{
+        font-size: 16px;
+    }
+}

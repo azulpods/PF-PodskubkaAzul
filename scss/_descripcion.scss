@@ -1,0 +1,39 @@
+.delicias {
+    grid-area: delicias;
+    text-align: justify;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: $color-2-group-2;
+    @include xm-device{
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    @include phone {
+        margin-top: 25px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    &__titulo {
+        font-size: $titulo-delicias;
+        font-weight: 600;
+        @include xm-device{
+            font-size: 24px;
+        }
+        @include phone {
+            font-size: 28px;
+        }
+    }
+    &__descripcion {
+        font-size: $descripcion-delicias;
+        width: 100%;
+        margin-top: 10px;
+        @include xm-device{
+            font-size: 18px;
+        }
+        @include phone {
+            font-size: 20px;
+        }
+    }
+}

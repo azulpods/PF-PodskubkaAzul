@@ -1,0 +1,23 @@
+.carousel{
+    grid-area: carousel;
+    height: 500px;
+    width: 100%;
+    @include xm-device{
+        height: auto;
+    }
+    @include phone {
+        height: auto;
+    }
+    &-item{
+        height: 500px;
+        @include xm-device{
+            height: auto;
+        }
+        @include phone{
+            height: auto;
+        }
+        img{
+            height: 100%;
+        }
+    }
+}
