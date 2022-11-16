@@ -149,11 +149,15 @@
             width: 100%;
         }
             img {
+            opacity: 85%;
             width: 100%;
             height: auto;
             align-self: center;
+            transition: 0.5s ease;
+            overflow: hidden;
             &:hover {
-                opacity: 75%;
+                opacity: 100%;
+                transform: scale(1.1);
             }
         }
     }
@@ -202,9 +206,13 @@
             width: 100%;
             height:auto;
             align-self: center;
+            opacity: 85%;
+            transition: 0.5s ease;
+            overflow: hidden;
             &:hover {
-                opacity: 75%;
-                    }
+                opacity: 100%;
+                transform: scale(1.1);
+                }
             }
     }
 }

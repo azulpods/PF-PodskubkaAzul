@@ -449,12 +449,16 @@ nav {
   }
 }
 .galeria__fotos img {
+  opacity: 85%;
   width: 100%;
   height: auto;
   align-self: center;
+  transition: 0.5s ease;
+  overflow: hidden;
 }
 .galeria__fotos img:hover {
-  opacity: 75%;
+  opacity: 100%;
+  transform: scale(1.1);
 }
 
 /*galeria macarons*/
@@ -507,9 +511,13 @@ nav {
   width: 100%;
   height: auto;
   align-self: center;
+  opacity: 85%;
+  transition: 0.5s ease;
+  overflow: hidden;
 }
 .galeria-macarons__fotos img:hover {
-  opacity: 75%;
+  opacity: 100%;
+  transform: scale(1.1);
 }
 
 .contenido {
