@@ -246,7 +246,7 @@ nav {
 
 .carousel {
   grid-area: carousel;
-  height: 500px;
+  height: 600px;
   width: 100%;
 }
 @media (max-width: 599px) {
@@ -260,7 +260,7 @@ nav {
   }
 }
 .carousel-item {
-  height: 500px;
+  height: 600px;
 }
 @media (max-width: 599px) {
   .carousel-item {
@@ -274,6 +274,7 @@ nav {
 }
 .carousel-item img {
   height: 100%;
+  object-fit: cover;
 }
 
 /*galeria index*/
@@ -559,6 +560,9 @@ nav {
   border-style: solid;
   border-width: 1px;
   border-color: #919193;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media (max-width: 599px) {
   .contenido .iconos ul {
