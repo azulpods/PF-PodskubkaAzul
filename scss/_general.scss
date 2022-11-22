@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    font-size: 62.5%;
+    @include xm-device{
+        font-size: 48%;
+    }
+    @include phone{
+        font-size: 55%;
+    }
+    @include tablet{
+        font-size: 59%;
+    }
+    @include imac{
+        font-size: 65%;
+    }
+    body {
+        font-family: 'baloo thambi 2', sans-serif;
+        background-image:url("../img/fondo.jpg");
+        background-size: 30%;
+        background-repeat: repeat;
+        @include xm-device{
+            background-size: 70%;
+        }
+        @include phone {
+            background-size: 60%;
+        }
+    }
+}
+
+a:link {
+    color: $color-4-group-2;
+    text-decoration: none;
+}
+
+a:visited {
+    color: $color-4-group-2;
+    text-decoration: none;
+}

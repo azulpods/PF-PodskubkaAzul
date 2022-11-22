@@ -174,11 +174,25 @@ nav {
 }
 
 .navbar {
+  font-size: 1.7rem;
   padding: 0;
+  --bs-navbar-color: rgba(0, 0, 0, 0.55);
+  --bs-navbar-brand-padding-y: 0.6rem;
+  --bs-navbar-brand-margin-end: 1rem;
+  --bs-navbar-brand-font-size: 1.8rem;
+  --bs-navbar-nav-link-padding-x: 1rem;
+  --bs-navbar-toggler-padding-y: 0.5rem;
+  --bs-navbar-toggler-padding-x: 1rem;
+  --bs-navbar-toggler-font-size: 1.8rem;
 }
 
 .dropdown-menu {
   padding: 0;
+}
+
+.dropdown-item {
+  font-size: 1.7rem;
+  font-weight: 400;
 }
 
 .btn-outline-success {
@@ -186,10 +200,23 @@ nav {
   border-style: solid;
   border-width: 1px;
   border-color: #919193;
-  --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #7b7aab;
-  --bs-btn-hover-border-color: $color-2-group-3;
-  --bs-btn-active-border-color: $color-2-group-3;
+  --bs-btn-hover-border-color: #7b7aab;
+  --bs-btn-active-bg: #7b7aab;
+  --bs-btn-active-border-color: #7b7aab;
+  --bs-btn-disabled-color: #7b7aab;
+  --bs-btn-disabled-border-color: #7b7aab;
+}
+
+.btn {
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-padding-y: 0.8rem;
+  --bs-btn-font-size: 1.7rem;
+}
+
+.form-control {
+  padding: 0.5rem 0.5rem;
+  font-size: 1.7rem;
 }
 
 .delicias {
@@ -215,33 +242,13 @@ nav {
   }
 }
 .delicias__titulo {
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 600;
 }
-@media (max-width: 599px) {
-  .delicias__titulo {
-    font-size: 24px;
-  }
-}
-@media (min-width: 600px) and (max-width: 767px) {
-  .delicias__titulo {
-    font-size: 28px;
-  }
-}
 .delicias__descripcion {
-  font-size: 22px;
+  font-size: 2.3rem;
   width: 100%;
   margin-top: 10px;
-}
-@media (max-width: 599px) {
-  .delicias__descripcion {
-    font-size: 18px;
-  }
-}
-@media (min-width: 600px) and (max-width: 767px) {
-  .delicias__descripcion {
-    font-size: 20px;
-  }
 }
 
 .carousel {
@@ -367,12 +374,7 @@ nav {
 .galeria-index .horizontal .box .hover h3 {
   color: #D9D9D9;
   text-shadow: 1px 1px 1px black;
-  font-size: 40px;
-}
-@media (max-width: 599px) {
-  .galeria-index .horizontal .box .hover h3 {
-    font-size: 36px;
-  }
+  font-size: 4rem;
 }
 
 /*galeria cakes y cupcakes*/
@@ -412,37 +414,17 @@ nav {
   border-color: #59529d;
 }
 .galeria__texto .precio {
-  font-size: 24px;
+  font-size: 2.5rem;
   font-weight: 600;
   align-items: center;
 }
-@media (max-width: 599px) {
-  .galeria__texto .precio {
-    font-size: 20px;
-  }
-}
-@media (min-width: 600px) and (max-width: 767px) {
-  .galeria__texto .precio {
-    font-size: 22px;
-  }
-}
 .galeria__texto p {
-  font-size: 20px;
+  font-size: 2.1rem;
   font-weight: 400;
   align-items: center;
   margin-bottom: 0;
   margin-left: 5px;
   margin-right: 5px;
-}
-@media (max-width: 599px) {
-  .galeria__texto p {
-    font-size: 16px;
-  }
-}
-@media (min-width: 600px) and (max-width: 767px) {
-  .galeria__texto p {
-    font-size: 18px;
-  }
 }
 @media (max-width: 599px) {
   .galeria__fotos {
@@ -489,7 +471,7 @@ nav {
   }
 }
 .galeria-macarons__fotos .precio {
-  font-size: 24px;
+  font-size: 2.5rem;
   font-weight: 600;
   text-align: center;
   border: solid;
@@ -497,16 +479,6 @@ nav {
   border-width: 2px;
   border-radius: 5%;
   border-color: #59529d;
-}
-@media (max-width: 599px) {
-  .galeria-macarons__fotos .precio {
-    font-size: 20px;
-  }
-}
-@media (min-width: 600px) and (max-width: 767px) {
-  .galeria-macarons__fotos .precio {
-    font-size: 22px;
-  }
 }
 .galeria-macarons__fotos img {
   width: 100%;
@@ -575,20 +547,18 @@ nav {
   }
 }
 .contenido .iconos ul h5 {
-  font-size: 24px;
+  font-size: 2.4rem;
   display: flex;
   justify-content: center;
   padding-bottom: 30px;
 }
 @media (max-width: 599px) {
   .contenido .iconos ul h5 {
-    font-size: 20px;
     padding-bottom: 15px;
   }
 }
 @media (min-width: 600px) and (max-width: 767px) {
   .contenido .iconos ul h5 {
-    font-size: 22px;
     padding-bottom: 20px;
   }
 }
@@ -608,34 +578,22 @@ nav {
   }
 }
 .contenido .iconos ul li img {
-  height: 36px;
+  height: 3.6rem;
   width: auto;
 }
-@media (max-width: 599px) {
-  .contenido .iconos ul li img {
-    height: 24px;
-  }
-}
-@media (min-width: 600px) and (max-width: 767px) {
-  .contenido .iconos ul li img {
-    height: 30px;
-  }
-}
 .contenido .iconos ul li .iconos-texto {
-  font-size: 18px;
+  font-size: 1.8rem;
   margin-left: 20px;
   text-align: left;
   text-justify: center;
 }
 @media (max-width: 599px) {
   .contenido .iconos ul li .iconos-texto {
-    font-size: 14px;
     margin-left: 10px;
   }
 }
 @media (min-width: 600px) and (max-width: 767px) {
   .contenido .iconos ul li .iconos-texto {
-    font-size: 16px;
     margin-left: 15px;
   }
 }
@@ -696,35 +654,15 @@ nav {
   border-width: 1px;
   border-color: #919193;
   color: rgba(12, 12, 12, 0.835);
-  font-size: 20px;
+  font-size: 2rem;
   text-align: left;
   box-sizing: border-box;
 }
-@media (max-width: 599px) {
-  .contenido .form .formulario {
-    font-size: 16px;
-  }
-}
-@media (min-width: 600px) and (max-width: 767px) {
-  .contenido .form .formulario {
-    font-size: 18px;
-  }
-}
 .contenido .form .formulario h5 {
-  font-size: 24px;
+  font-size: 2.4rem;
   display: flex;
   justify-content: center;
   padding-bottom: 30px;
-}
-@media (max-width: 599px) {
-  .contenido .form .formulario h5 {
-    font-size: 20px;
-  }
-}
-@media (min-width: 600px) and (max-width: 767px) {
-  .contenido .form .formulario h5 {
-    font-size: 22px;
-  }
 }
 .contenido .form .formulario__input {
   height: 30px;
@@ -734,6 +672,7 @@ nav {
   background-color: rgba(235, 235, 238, 0.9882352941);
   border-style: solid;
   border-width: 1px;
+  font-size: 1.8rem;
 }
 .contenido .form .formulario__text {
   height: 200px;
@@ -742,6 +681,7 @@ nav {
   background-color: rgba(235, 235, 238, 0.9882352941);
   border-style: solid;
   border-width: 1px;
+  font-size: 1.8rem;
 }
 .contenido .form .formulario .button {
   height: 30px;
@@ -749,19 +689,9 @@ nav {
   border: solid;
   border-width: 1px;
   border-color: #919193;
-  font-size: 16px;
+  font-size: 1.7rem;
   color: rgba(12, 12, 12, 0.835);
   justify-content: center;
-}
-@media (max-width: 599px) {
-  .contenido .form .formulario .button {
-    font-size: 14px;
-  }
-}
-@media (min-width: 600px) and (max-width: 767px) {
-  .contenido .form .formulario .button {
-    font-size: 14px;
-  }
 }
 
 footer {
@@ -771,17 +701,7 @@ footer {
   align-items: center;
   border-style: none;
   background-color: #D9D9D9;
-  font-size: 18px;
-}
-@media (max-width: 599px) {
-  footer {
-    font-size: 14px;
-  }
-}
-@media (min-width: 600px) and (max-width: 767px) {
-  footer {
-    font-size: 16px;
-  }
+  font-size: 1.8rem;
 }
 
 * {
@@ -789,19 +709,42 @@ footer {
   padding: 0px;
 }
 
-body {
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 599px) {
+  html {
+    font-size: 48%;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 59%;
+  }
+}
+@media (min-width: 1620px) {
+  html {
+    font-size: 65%;
+  }
+}
+html body {
   font-family: "baloo thambi 2", sans-serif;
   background-image: url("../img/fondo.jpg");
   background-size: 30%;
   background-repeat: repeat;
 }
 @media (max-width: 599px) {
-  body {
+  html body {
     background-size: 70%;
   }
 }
 @media (min-width: 600px) and (max-width: 767px) {
-  body {
+  html body {
     background-size: 60%;
   }
 }

@@ -1,3 +1,10 @@
+@mixin titulo-secundario {
+    font-size: $contacto-titulo;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
 .contenido {
     grid-area: contenido;
     display: grid;
@@ -41,16 +48,11 @@
                 padding: 20px;
             }
             h5{
-                font-size: $contacto-titulo;
-                display: flex;
-                justify-content: center;
-                padding-bottom: 30px;
+                @include titulo-secundario;
                 @include xm-device{
-                    font-size: 20px;
                     padding-bottom: 15px;
                 }
                 @include phone{
-                    font-size: 22px;
                     padding-bottom: 20px;
                 }
             }
@@ -65,14 +67,8 @@
                     margin-bottom: 20px;
                 }
                 img{
-                    height: 36px;
+                    height: 3.6rem;
                     width: auto;
-                    @include xm-device{
-                        height: 24px;
-                    }
-                    @include phone{
-                        height: 30px;
-                    }
                 }
                 .iconos-texto{
                     font-size: $iconos-texto;
@@ -80,11 +76,9 @@
                     text-align: left;
                     text-justify: center;
                     @include xm-device{
-                        font-size: 14px;
                         margin-left: 10px;
                     }
                     @include phone{
-                        font-size: 16px;
                         margin-left: 15px;
                     }
                 }
@@ -142,23 +136,8 @@
             font-size: $formulario;
             text-align: left;
             box-sizing: border-box;
-            @include xm-device{
-                font-size: 16px;
-            }
-            @include phone{
-                font-size: 18px;
-            }
             h5{
-                font-size: $contacto-titulo;
-                display: flex;
-                justify-content: center;
-                padding-bottom: 30px;
-                @include xm-device{
-                    font-size: 20px;
-                }
-                @include phone{
-                    font-size: 22px;
-                }
+                @include titulo-secundario;
             }
             &__input {
                 height: 30px;
@@ -168,6 +147,7 @@
                 background-color: $color-4-group-1;
                 border-style: solid;
                 border-width: 1px;
+                font-size: $formulario-input;
             }
             &__text {
                 height: 200px;
@@ -176,6 +156,7 @@
                 background-color:$color-4-group-1;
                 border-style: solid;
                 border-width: 1px;
+                font-size: $formulario-input;
             }
             .button {
                 height: 30px;
@@ -186,12 +167,6 @@
                 font-size: $button-font;
                 color:  $color-2-group-2;
                 justify-content: center;
-                @include xm-device{
-                    font-size: 14px;
-                }
-                @include phone{
-                    font-size: 14px;
-                }
             }
         }
     }

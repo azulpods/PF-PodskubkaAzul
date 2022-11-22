@@ -9,31 +9,4 @@
 @import "galerias";
 @import "contacto";
 @import "footer";
-
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-body {
-    font-family: 'baloo thambi 2', sans-serif;
-    background-image:url("../img/fondo.jpg");
-    background-size: 30%;
-    background-repeat: repeat;
-    @include xm-device{
-        background-size: 70%;
-    }
-    @include phone {
-        background-size: 60%;
-    }
-}
-
-a:link {
-    color: $color-4-group-2;
-    text-decoration: none;
-}
-
-a:visited {
-    color: $color-4-group-2;
-    text-decoration: none;
-}
+@import "general";

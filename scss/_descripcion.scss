@@ -18,22 +18,10 @@
     &__titulo {
         font-size: $titulo-delicias;
         font-weight: 600;
-        @include xm-device{
-            font-size: 24px;
-        }
-        @include phone {
-            font-size: 28px;
-        }
     }
     &__descripcion {
         font-size: $descripcion-delicias;
         width: 100%;
         margin-top: 10px;
-        @include xm-device{
-            font-size: 18px;
-        }
-        @include phone {
-            font-size: 20px;
-        }
     }
 }

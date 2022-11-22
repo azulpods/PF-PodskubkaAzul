@@ -14,11 +14,25 @@ nav {
 }
 
 .navbar {
+    font-size: $nav-font;
     padding: 0;
+    --bs-navbar-color: rgba(0, 0, 0, 0.55);
+    --bs-navbar-brand-padding-y: 0.6rem;
+    --bs-navbar-brand-margin-end: 1rem;
+    --bs-navbar-brand-font-size: 1.8rem;
+    --bs-navbar-nav-link-padding-x: 1rem;
+    --bs-navbar-toggler-padding-y: 0.5rem;
+    --bs-navbar-toggler-padding-x: 1rem;
+    --bs-navbar-toggler-font-size: 1.8rem;
 }
 
 .dropdown-menu {
     padding: 0;
+}
+
+.dropdown-item{
+    font-size: $nav-font;
+    font-weight: 400;
 }
 
 .btn-outline-success {
@@ -26,8 +40,22 @@ nav {
     border-style: solid;
     border-width: 1px;
     border-color: $color-1-group-3;
-    --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #7b7aab;
-    --bs-btn-hover-border-color: $color-2-group-3;
-    --bs-btn-active-border-color: $color-2-group-3;
+    --bs-btn-hover-border-color: #7b7aab;
+    --bs-btn-active-bg: #7b7aab;
+    --bs-btn-active-border-color: #7b7aab;
+    --bs-btn-disabled-color: #7b7aab;
+    --bs-btn-disabled-border-color: #7b7aab;
 }
+
+.btn {
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-padding-y: 0.8rem;
+    --bs-btn-font-size: 1.7rem;
+}
+
+.form-control {
+    padding: 0.5rem 0.5rem;
+    font-size: $button-font;
+}
+
