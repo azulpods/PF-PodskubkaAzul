@@ -1,6 +1,6 @@
 .carousel{
     grid-area: carousel;
-    height: 600px;
+    height: 650px;
     width: 100%;
     @include xm-device{
         height: auto;
@@ -8,12 +8,24 @@
     @include phone {
         height: auto;
     }
+    @include desktop {
+        height: 800px;
+    }
+    @include imac {
+        height: auto;
+    }
     &-item{
-        height: 600px;
+        height: 650px;
         @include xm-device{
             height: auto;
         }
         @include phone{
+            height: auto;
+        }
+        @include desktop {
+            height: 800px;
+        }
+        @include imac {
             height: auto;
         }
         img{

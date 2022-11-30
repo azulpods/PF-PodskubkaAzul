@@ -253,7 +253,7 @@ nav {
 
 .carousel {
   grid-area: carousel;
-  height: 600px;
+  height: 650px;
   width: 100%;
 }
 @media (max-width: 599px) {
@@ -266,8 +266,18 @@ nav {
     height: auto;
   }
 }
+@media (min-width: 1024px) and (max-width: 1619px) {
+  .carousel {
+    height: 800px;
+  }
+}
+@media (min-width: 1620px) {
+  .carousel {
+    height: auto;
+  }
+}
 .carousel-item {
-  height: 600px;
+  height: 650px;
 }
 @media (max-width: 599px) {
   .carousel-item {
@@ -275,6 +285,16 @@ nav {
   }
 }
 @media (min-width: 600px) and (max-width: 767px) {
+  .carousel-item {
+    height: auto;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1619px) {
+  .carousel-item {
+    height: 800px;
+  }
+}
+@media (min-width: 1620px) {
   .carousel-item {
     height: auto;
   }
